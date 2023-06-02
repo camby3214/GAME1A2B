@@ -36,8 +36,16 @@ class GameViewController: UIViewController {
         setMainTableView()
         setBtnTag()
         setBtn()
+        self.title = "1A2B"
+        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        
     }
     
+    private func reload() {
+        viewModel = GameViewModel()
+        creatAnswerArray()
+        mainTableView.reloadData()
+    }
     
     private func creatAnswerArray() {
         var numberSet: Set<Int> = []
@@ -82,6 +90,8 @@ class GameViewController: UIViewController {
         mainTableView.backgroundColor = .white
         mainTableView.separatorStyle = .singleLine
         mainTableView.separatorColor = .black
+        mainTableView.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        
     }
     
     private func setLabelText(btnNumber: String, labelNumber: Int) {
@@ -89,16 +99,16 @@ class GameViewController: UIViewController {
         if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
             switch labelNumber {
             case GameEnterLabel.EnterLabel1:
-                cell.enterLabel1.text = btnNumber
+                UILabel.setNumLabel(label: cell.enterLabel1, string: btnNumber)
                 
             case GameEnterLabel.EnterLabel2:
-                cell.enterLabel2.text = btnNumber
+                UILabel.setNumLabel(label: cell.enterLabel2, string: btnNumber)
                 
             case GameEnterLabel.EnterLabel3:
-                cell.enterLabel3.text = btnNumber
+                UILabel.setNumLabel(label: cell.enterLabel3, string: btnNumber)
                 
             case GameEnterLabel.EnterLabel4:
-                cell.enterLabel4.text = btnNumber
+                UILabel.setNumLabel(label: cell.enterLabel4, string: btnNumber)
                 
             default:
                 break
@@ -137,6 +147,18 @@ class GameViewController: UIViewController {
             }
             
         }
+        if aValue == 4 {
+            let alert = UIAlertController(title: "成功", message: "恭喜答對", preferredStyle: .alert)
+            let action = UIAlertAction(title: "確定", style: .default)
+            let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
+                self.reload()
+            }
+            
+            alert.addAction(action)
+            alert.addAction(action2)
+            present(alert, animated: true)
+        }
+        
         
         return(aValue: aValue, bValue: bValue)
     }
@@ -166,8 +188,10 @@ class GameViewController: UIViewController {
             
             
             if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
-                cell.hintLabel1.text = String(compareArray().aValue)
-                cell.hintLabel3.text = String(compareArray().bValue)
+                UILabel.setNumLabel(label: cell.hintLabel1, string: String(compareArray().aValue))
+                UILabel.setNumLabel(label: cell.hintLabel2, string: "A")
+                UILabel.setNumLabel(label: cell.hintLabel3, string: String(compareArray().bValue))
+                UILabel.setNumLabel(label: cell.hintLabel4, string: "B")
             }
             viewModel.indexPath.row = viewModel.indexPath.row + 1
             viewModel.currentFocusIndex = 0
@@ -198,6 +222,16 @@ extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
+        cell.selectionStyle = .none
+        cell.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        cell.enterLabel1.text = ""
+        cell.enterLabel2.text = ""
+        cell.enterLabel3.text = ""
+        cell.enterLabel4.text = ""
+        cell.hintLabel1.text = ""
+        cell.hintLabel2.text = ""
+        cell.hintLabel3.text = ""
+        cell.hintLabel4.text = ""
         return cell
     }
     
