@@ -531,7 +531,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="jhT-3k-Mzp"/>
                     <connections>
-                        <outlet property="CancelBtn" destination="qVy-B8-LWT" id="JeH-WU-JZ6"/>
                         <outlet property="btn0" destination="olE-Zk-c7V" id="5i4-hk-oVl"/>
                         <outlet property="btn1" destination="HYx-eQ-8tv" id="l6I-ac-rvz"/>
                         <outlet property="btn2" destination="Yhf-0Z-cwZ" id="Msf-YC-Fd1"/>
@@ -542,6 +541,7 @@
                         <outlet property="btn7" destination="nTe-dG-DFi" id="qML-ik-Cnv"/>
                         <outlet property="btn8" destination="YMA-TB-FQ8" id="M45-ZQ-834"/>
                         <outlet property="btn9" destination="B1h-4V-pgI" id="vPd-51-9qc"/>
+                        <outlet property="cancelBtn" destination="qVy-B8-LWT" id="JeH-WU-JZ6"/>
                         <outlet property="mainTableView" destination="WJi-bT-cE5" id="3m9-6Y-p93"/>
                         <outlet property="okBtn" destination="HmN-F2-Ylq" id="8rH-Em-Y55"/>
                     </connections>

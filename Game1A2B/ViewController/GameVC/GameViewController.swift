@@ -25,7 +25,7 @@ class GameViewController: UIViewController {
     
     
     @IBOutlet weak var okBtn: UIButton!
-    @IBOutlet weak var CancelBtn: UIButton!
+    @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
     var viewModel = GameViewModel()
@@ -81,7 +81,7 @@ class GameViewController: UIViewController {
         UIButton.setNumberBtn(btn: btn8, title: "8")
         UIButton.setNumberBtn(btn: btn9, title: "9")
         UIButton.setNumberBtn(btn: okBtn, title: "OK")
-        UIButton.setNumberBtn(btn: CancelBtn, title: "C")
+        UIButton.setNumberBtn(btn: cancelBtn, title: "C")
     }
     
     private func setMainTableView() {
@@ -197,7 +197,7 @@ class GameViewController: UIViewController {
             viewModel.currentFocusIndex = 0
             viewModel.enterNumberArray = []
             break
-        case CancelBtn:
+        case cancelBtn:
             if viewModel.currentFocusIndex > 0 {
                 viewModel.currentFocusIndex -= 1
                 setLabelText(btnNumber: "", labelNumber: viewModel.currentFocusIndex)
