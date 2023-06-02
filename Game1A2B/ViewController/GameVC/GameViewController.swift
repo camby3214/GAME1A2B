@@ -51,6 +51,7 @@ class GameViewController: UIViewController {
     
     @objc func addButtonTapped() {
         reload()
+        setBtnEnable(enable: true)
     }
     
     private func reload() {
@@ -136,19 +137,19 @@ class GameViewController: UIViewController {
         
     }
     
-    private func btnDisable() {
-        btn0.isEnabled = false
-        btn1.isEnabled = false
-        btn2.isEnabled = false
-        btn3.isEnabled = false
-        btn4.isEnabled = false
-        btn5.isEnabled = false
-        btn6.isEnabled = false
-        btn7.isEnabled = false
-        btn8.isEnabled = false
-        btn9.isEnabled = false
-        okBtn.isEnabled = false
-        cancelBtn.isEnabled = false
+    private func setBtnEnable(enable: Bool) {
+        btn0.isEnabled = enable
+        btn1.isEnabled = enable
+        btn2.isEnabled = enable
+        btn3.isEnabled = enable
+        btn4.isEnabled = enable
+        btn5.isEnabled = enable
+        btn6.isEnabled = enable
+        btn7.isEnabled = enable
+        btn8.isEnabled = enable
+        btn9.isEnabled = enable
+        okBtn.isEnabled = enable
+        cancelBtn.isEnabled = enable
     }
     
     
@@ -180,7 +181,7 @@ class GameViewController: UIViewController {
         if aValue == 4 {
             let alert = UIAlertController(title: "成功", message: "恭喜答對", preferredStyle: .alert)
             let action = UIAlertAction(title: "確定", style: .default){ (_) in
-                self.btnDisable()
+                self.setBtnEnable(enable: false)
             }
             let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
                 self.reload()
@@ -194,7 +195,7 @@ class GameViewController: UIViewController {
         if viewModel.indexPath.row == viewModel.gameNumberOfTime - 1 {
             let alert = UIAlertController(title: "失敗", message: "超過次數", preferredStyle: .alert)
             let action = UIAlertAction(title: "確定", style: .default){ (_) in
-                self.btnDisable()
+                self.setBtnEnable(enable: false)
             }
             let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
                 self.reload()
