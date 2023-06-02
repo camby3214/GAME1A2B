@@ -11,4 +11,6 @@ class GameViewModel {
     var currentFocusIndex = 0
     var enterNumberArray: [Int] = []
     var indexPath = IndexPath(row: 0, section: 0)
+    var answerArray: [Int] = []
+    var gameNumberOfTime = 8
 }

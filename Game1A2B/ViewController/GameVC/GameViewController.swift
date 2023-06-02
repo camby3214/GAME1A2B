@@ -32,8 +32,19 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        creatAnswerArray()
         setMainTableView()
         setBtnTag()
+    }
+    
+    
+    private func creatAnswerArray() {
+        var numberSet: Set<Int> = []
+        while numberSet.count < 4 {
+            let randomNumber = Int.random(in: 0...9)
+            numberSet.insert(randomNumber)
+        }
+        viewModel.answerArray = Array(numberSet)
     }
     
     
@@ -98,6 +109,26 @@ class GameViewController: UIViewController {
         
     }
     
+    
+    private func compareArray() -> (aValue: Int, bValue: Int){
+        var aValue = 0
+        var bValue = 0
+        
+        for (index, value) in viewModel.answerArray.enumerated() {
+            if value == viewModel.enterNumberArray[index] {
+                aValue += 1
+                bValue -= 1
+            } else if (viewModel.enterNumberArray.contains(value)) {
+                bValue += 1
+            }
+            
+        }
+        
+        return(aValue: aValue, bValue: bValue)
+    }
+    
+    
+    
 
     
     
@@ -121,8 +152,8 @@ class GameViewController: UIViewController {
             
             
             if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
-                cell.hintLabel1.text = "1"
-                cell.hintLabel3.text = "2"
+                cell.hintLabel1.text = String(compareArray().aValue)
+                cell.hintLabel3.text = String(compareArray().bValue)
             }
             viewModel.indexPath.row = viewModel.indexPath.row + 1
             viewModel.currentFocusIndex = 0
@@ -148,12 +179,11 @@ class GameViewController: UIViewController {
 
 extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.gameNumberOfTime
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
-           cell.enterLabel1.text = ""
         return cell
     }
     
