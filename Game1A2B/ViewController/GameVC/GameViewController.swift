@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
         setMainTableView()
         setBtnTag()
         setBtn()
-        self.title = "1A2B"
+        self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
         
     }
@@ -45,6 +45,7 @@ class GameViewController: UIViewController {
         viewModel = GameViewModel()
         creatAnswerArray()
         mainTableView.reloadData()
+        self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
     }
     
     private func creatAnswerArray() {
@@ -122,6 +123,22 @@ class GameViewController: UIViewController {
         
     }
     
+    private func btnDisable() {
+        btn0.isEnabled = false
+        btn1.isEnabled = false
+        btn2.isEnabled = false
+        btn3.isEnabled = false
+        btn4.isEnabled = false
+        btn5.isEnabled = false
+        btn6.isEnabled = false
+        btn7.isEnabled = false
+        btn8.isEnabled = false
+        btn9.isEnabled = false
+        okBtn.isEnabled = false
+        cancelBtn.isEnabled = false
+    }
+    
+    
     private func btnAction(btnNum: Int){
         if viewModel.enterNumberArray.contains(btnNum) {
             
@@ -149,7 +166,9 @@ class GameViewController: UIViewController {
         }
         if aValue == 4 {
             let alert = UIAlertController(title: "成功", message: "恭喜答對", preferredStyle: .alert)
-            let action = UIAlertAction(title: "確定", style: .default)
+            let action = UIAlertAction(title: "確定", style: .default){ (_) in
+                self.btnDisable()
+            }
             let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
                 self.reload()
             }
@@ -157,6 +176,21 @@ class GameViewController: UIViewController {
             alert.addAction(action)
             alert.addAction(action2)
             present(alert, animated: true)
+        }
+        
+        if viewModel.indexPath.row == viewModel.gameNumberOfTime - 1 {
+            let alert = UIAlertController(title: "失敗", message: "超過次數", preferredStyle: .alert)
+            let action = UIAlertAction(title: "確定", style: .default){ (_) in
+                self.btnDisable()
+            }
+            let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
+                self.reload()
+            }
+            
+            alert.addAction(action)
+            alert.addAction(action2)
+            present(alert, animated: true)
+        
         }
         
         
