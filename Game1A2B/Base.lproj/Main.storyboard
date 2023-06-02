@@ -387,7 +387,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="OK"/>
                                 <connections>
-                                    <action selector="onpress:" destination="5RF-Pg-hly" eventType="touchUpInside" id="eL7-XH-idU"/>
+                                    <action selector="onPressBtn:" destination="5RF-Pg-hly" eventType="touchUpInside" id="PXS-kr-oMf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnh-Zx-1E6">
@@ -517,6 +517,18 @@
                                     <action selector="onPressNumBtn:" destination="5RF-Pg-hly" eventType="touchUpInside" id="GHh-5k-U4G"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVy-B8-LWT">
+                                <rect key="frame" x="221.66666666666666" y="671" width="49.999999999999972" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9hv-nx-qlB"/>
+                                    <constraint firstAttribute="width" constant="50" id="cZK-qn-Gt8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="C"/>
+                                <connections>
+                                    <action selector="onPressBtn:" destination="5RF-Pg-hly" eventType="touchUpInside" id="tfY-3i-34C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sv2-fU-SAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -531,9 +543,11 @@
                             <constraint firstItem="LV5-Hk-Xq0" firstAttribute="leading" secondItem="cnh-Zx-1E6" secondAttribute="trailing" id="K0n-02-WiA"/>
                             <constraint firstItem="Yhf-0Z-cwZ" firstAttribute="leading" secondItem="LV5-Hk-Xq0" secondAttribute="trailing" id="KzZ-t2-rUQ"/>
                             <constraint firstItem="HmN-F2-Ylq" firstAttribute="centerY" secondItem="gyd-26-dLt" secondAttribute="centerY" constant="270" id="Mgg-dE-sJz"/>
+                            <constraint firstItem="qVy-B8-LWT" firstAttribute="leading" secondItem="HmN-F2-Ylq" secondAttribute="trailing" id="NGm-RD-0I6"/>
                             <constraint firstItem="Yhf-0Z-cwZ" firstAttribute="top" secondItem="nTe-dG-DFi" secondAttribute="bottom" id="Pau-N5-dY8"/>
                             <constraint firstItem="nTe-dG-DFi" firstAttribute="top" secondItem="WJi-bT-cE5" secondAttribute="bottom" constant="50" id="ShO-x0-3FD"/>
                             <constraint firstItem="olE-Zk-c7V" firstAttribute="leading" secondItem="HYx-eQ-8tv" secondAttribute="trailing" id="TWU-re-Ugp"/>
+                            <constraint firstItem="qVy-B8-LWT" firstAttribute="centerY" secondItem="HmN-F2-Ylq" secondAttribute="centerY" id="XkU-rw-e92"/>
                             <constraint firstItem="YMA-TB-FQ8" firstAttribute="top" secondItem="WJi-bT-cE5" secondAttribute="bottom" constant="50" id="Yni-NX-fsQ"/>
                             <constraint firstItem="Yhf-0Z-cwZ" firstAttribute="leading" secondItem="LV5-Hk-Xq0" secondAttribute="trailing" id="ZaR-gY-uyC"/>
                             <constraint firstItem="HYx-eQ-8tv" firstAttribute="top" secondItem="6M3-25-4OF" secondAttribute="bottom" id="cKG-8W-vaw"/>
@@ -554,6 +568,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="jhT-3k-Mzp"/>
                     <connections>
+                        <outlet property="CancelBtn" destination="qVy-B8-LWT" id="JeH-WU-JZ6"/>
                         <outlet property="btn0" destination="olE-Zk-c7V" id="5i4-hk-oVl"/>
                         <outlet property="btn1" destination="HYx-eQ-8tv" id="l6I-ac-rvz"/>
                         <outlet property="btn2" destination="Yhf-0Z-cwZ" id="Msf-YC-Fd1"/>

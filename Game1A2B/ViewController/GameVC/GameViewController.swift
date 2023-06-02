@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
     
     
     @IBOutlet weak var okBtn: UIButton!
+    @IBOutlet weak var CancelBtn: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
     
     var viewModel = GameViewModel()
@@ -58,6 +59,11 @@ class GameViewController: UIViewController {
     }
     
     private func setLabelText(btnNumber: String, labelNumber: Int) {
+        
+        
+        
+        
+        
         if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
             switch labelNumber {
             case 0:
@@ -72,7 +78,9 @@ class GameViewController: UIViewController {
                 break
             }
         }
-        if viewModel.currentFocusIndex<3 {
+        
+        
+        if viewModel.currentFocusIndex<4 && btnNumber != "" {
             viewModel.currentFocusIndex = viewModel.currentFocusIndex + 1
         }
         
@@ -82,7 +90,9 @@ class GameViewController: UIViewController {
         if viewModel.enterNumberArray.contains(btnNum) {
             
         } else {
-            viewModel.enterNumberArray.append(btnNum)
+            if viewModel.enterNumberArray.count<4 {
+                viewModel.enterNumberArray.append(btnNum)
+            }
             setLabelText(btnNumber: String(btnNum), labelNumber: viewModel.currentFocusIndex)
         }
         
@@ -100,7 +110,7 @@ class GameViewController: UIViewController {
     
     
     
-    @IBAction func onpress(_ sender: UIButton) {
+    @IBAction func onPressBtn(_ sender: UIButton) {
         
         switch sender {
         
@@ -117,6 +127,14 @@ class GameViewController: UIViewController {
             viewModel.indexPath.row = viewModel.indexPath.row+1
             viewModel.currentFocusIndex = 0
             viewModel.enterNumberArray = []
+            break
+        case CancelBtn:
+            if viewModel.currentFocusIndex > 0 {
+                viewModel.currentFocusIndex -= 1
+                setLabelText(btnNumber: "", labelNumber: viewModel.currentFocusIndex)
+                viewModel.enterNumberArray.removeLast()
+            }
+            break
         default:
             break
         }
