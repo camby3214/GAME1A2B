@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38062D362A298E9800BCA054 /* EnumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D352A298E9800BCA054 /* EnumList.swift */; };
+		38062D392A29CAD100BCA054 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D382A29CAD100BCA054 /* UIButton+Extention.swift */; };
 		38A0F5F32A28232D000F1D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F5F22A28232D000F1D82 /* AppDelegate.swift */; };
 		38A0F5F52A28232D000F1D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F5F42A28232D000F1D82 /* SceneDelegate.swift */; };
 		38A0F5F72A28232D000F1D82 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F5F62A28232D000F1D82 /* MainViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		38062D352A298E9800BCA054 /* EnumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumList.swift; sourceTree = "<group>"; };
+		38062D382A29CAD100BCA054 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 		38A0F5EF2A28232D000F1D82 /* Game1A2B.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game1A2B.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A0F5F22A28232D000F1D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A0F5F42A28232D000F1D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			path = Utilite;
 			sourceTree = "<group>";
 		};
+		38062D372A29CAB900BCA054 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				38062D382A29CAD100BCA054 /* UIButton+Extention.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		38A0F5E62A28232D000F1D82 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		38A0F5F12A28232D000F1D82 /* Game1A2B */ = {
 			isa = PBXGroup;
 			children = (
+				38062D372A29CAB900BCA054 /* Extention */,
 				38062D342A298E2A00BCA054 /* Utilite */,
 				38A0F6282A2830BA000F1D82 /* Cell */,
 				38A0F6272A2830A5000F1D82 /* ViewController */,
@@ -314,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A0F6232A2825DB000F1D82 /* GameViewController.swift in Sources */,
+				38062D392A29CAD100BCA054 /* UIButton+Extention.swift in Sources */,
 				38A0F5F72A28232D000F1D82 /* MainViewController.swift in Sources */,
 				38062D362A298E9800BCA054 /* EnumList.swift in Sources */,
 				38A0F5F32A28232D000F1D82 /* AppDelegate.swift in Sources */,

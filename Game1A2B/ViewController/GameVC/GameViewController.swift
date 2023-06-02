@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
         creatAnswerArray()
         setMainTableView()
         setBtnTag()
+        setBtn()
     }
     
     
@@ -59,6 +60,20 @@ class GameViewController: UIViewController {
         btn7.tag = GameNumBtnTag.Btn7
         btn8.tag = GameNumBtnTag.Btn8
         btn9.tag = GameNumBtnTag.Btn9
+    }
+    private func setBtn() {
+        UIButton.setNumberBtn(btn: btn0, title: "0")
+        UIButton.setNumberBtn(btn: btn1, title: "1")
+        UIButton.setNumberBtn(btn: btn2, title: "2")
+        UIButton.setNumberBtn(btn: btn3, title: "3")
+        UIButton.setNumberBtn(btn: btn4, title: "4")
+        UIButton.setNumberBtn(btn: btn5, title: "5")
+        UIButton.setNumberBtn(btn: btn6, title: "6")
+        UIButton.setNumberBtn(btn: btn7, title: "7")
+        UIButton.setNumberBtn(btn: btn8, title: "8")
+        UIButton.setNumberBtn(btn: btn9, title: "9")
+        UIButton.setNumberBtn(btn: okBtn, title: "OK")
+        UIButton.setNumberBtn(btn: CancelBtn, title: "C")
     }
     
     private func setMainTableView() {
@@ -117,7 +132,6 @@ class GameViewController: UIViewController {
         for (index, value) in viewModel.answerArray.enumerated() {
             if value == viewModel.enterNumberArray[index] {
                 aValue += 1
-                bValue -= 1
             } else if (viewModel.enterNumberArray.contains(value)) {
                 bValue += 1
             }
