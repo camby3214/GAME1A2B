@@ -38,16 +38,16 @@ class GameViewController: UIViewController {
     
     
     private func setBtnTag() {
-        btn0.tag = 0
-        btn1.tag = 1
-        btn2.tag = 2
-        btn3.tag = 3
-        btn4.tag = 4
-        btn5.tag = 5
-        btn6.tag = 6
-        btn7.tag = 7
-        btn8.tag = 8
-        btn9.tag = 9
+        btn0.tag = GameNumBtnTag.Btn0
+        btn1.tag = GameNumBtnTag.Btn1
+        btn2.tag = GameNumBtnTag.Btn2
+        btn3.tag = GameNumBtnTag.Btn3
+        btn4.tag = GameNumBtnTag.Btn4
+        btn5.tag = GameNumBtnTag.Btn5
+        btn6.tag = GameNumBtnTag.Btn6
+        btn7.tag = GameNumBtnTag.Btn7
+        btn8.tag = GameNumBtnTag.Btn8
+        btn9.tag = GameNumBtnTag.Btn9
     }
     
     private func setMainTableView() {
@@ -60,27 +60,27 @@ class GameViewController: UIViewController {
     
     private func setLabelText(btnNumber: String, labelNumber: Int) {
         
-        
-        
-        
-        
         if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
             switch labelNumber {
-            case 0:
+            case GameEnterLabel.EnterLabel1:
                 cell.enterLabel1.text = btnNumber
-            case 1:
+                
+            case GameEnterLabel.EnterLabel2:
                 cell.enterLabel2.text = btnNumber
-            case 2:
+                
+            case GameEnterLabel.EnterLabel3:
                 cell.enterLabel3.text = btnNumber
-            case 3:
+                
+            case GameEnterLabel.EnterLabel4:
                 cell.enterLabel4.text = btnNumber
+                
             default:
                 break
             }
         }
         
         
-        if viewModel.currentFocusIndex<4 && btnNumber != "" {
+        if viewModel.currentFocusIndex < GameCurrentState.GameAnswerNumberOfDigits && btnNumber != "" {
             viewModel.currentFocusIndex = viewModel.currentFocusIndex + 1
         }
         
@@ -90,7 +90,7 @@ class GameViewController: UIViewController {
         if viewModel.enterNumberArray.contains(btnNum) {
             
         } else {
-            if viewModel.enterNumberArray.count<4 {
+            if viewModel.enterNumberArray.count < GameCurrentState.GameAnswerNumberOfDigits {
                 viewModel.enterNumberArray.append(btnNum)
             }
             setLabelText(btnNumber: String(btnNum), labelNumber: viewModel.currentFocusIndex)
@@ -102,7 +102,7 @@ class GameViewController: UIViewController {
     
     
     @IBAction func onPressNumBtn(_ sender: UIButton) {
-        if viewModel.currentFocusIndex < 4 {
+        if viewModel.currentFocusIndex < GameCurrentState.GameAnswerNumberOfDigits {
             btnAction(btnNum: sender.tag)
         }
     }
@@ -115,7 +115,7 @@ class GameViewController: UIViewController {
         switch sender {
         
         case okBtn:
-            if viewModel.currentFocusIndex != 3 {
+            if viewModel.currentFocusIndex != GameCurrentState.GameAnswerNumberOfDigits {
                 break
             }
             
@@ -124,7 +124,7 @@ class GameViewController: UIViewController {
                 cell.hintLabel1.text = "1"
                 cell.hintLabel3.text = "2"
             }
-            viewModel.indexPath.row = viewModel.indexPath.row+1
+            viewModel.indexPath.row = viewModel.indexPath.row + 1
             viewModel.currentFocusIndex = 0
             viewModel.enterNumberArray = []
             break
