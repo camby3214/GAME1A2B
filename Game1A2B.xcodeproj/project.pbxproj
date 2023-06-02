@@ -23,6 +23,7 @@
 		38A0F6262A282CB7000F1D82 /* AssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F6252A282CB7000F1D82 /* AssetsManager.swift */; };
 		38A0F62A2A2830D7000F1D82 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F6292A2830D7000F1D82 /* MainTableViewCell.swift */; };
 		DB383B932A28EB8000B17396 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB383B922A28EB8000B17396 /* GameViewModel.swift */; };
+		DBA489632A2AB0D900DD2179 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA489622A2AB0D900DD2179 /* CustomAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		38A0F6252A282CB7000F1D82 /* AssetsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsManager.swift; sourceTree = "<group>"; };
 		38A0F6292A2830D7000F1D82 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		DB383B922A28EB8000B17396 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		DBA489622A2AB0D900DD2179 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlert.swift; path = Game1A2B/Utilite/CustomAlert.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		38062D342A298E2A00BCA054 /* Utilite */ = {
 			isa = PBXGroup;
 			children = (
+				DBA489612A2AB07C00DD2179 /* CustomAlert */,
 				38062D352A298E9800BCA054 /* EnumList.swift */,
 			);
 			path = Utilite;
@@ -194,6 +197,14 @@
 				DB383B922A28EB8000B17396 /* GameViewModel.swift */,
 			);
 			path = GameVC;
+			sourceTree = "<group>";
+		};
+		DBA489612A2AB07C00DD2179 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				DBA489622A2AB0D900DD2179 /* CustomAlert.swift */,
+			);
+			path = CustomAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA489632A2AB0D900DD2179 /* CustomAlert.swift in Sources */,
 				38A0F6232A2825DB000F1D82 /* GameViewController.swift in Sources */,
 				38062D392A29CAD100BCA054 /* UIButton+Extention.swift in Sources */,
 				38A0F5F72A28232D000F1D82 /* MainViewController.swift in Sources */,

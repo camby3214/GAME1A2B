@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, CoustomAlertDelegate {
+    
+    
     
     
     @IBOutlet weak var btn9: UIButton!
@@ -39,6 +41,7 @@ class GameViewController: UIViewController {
         setNav()
         self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        CustomAlert.shared.delegate = self
         
     }
     
@@ -179,32 +182,16 @@ class GameViewController: UIViewController {
             
         }
         if aValue == 4 {
-            let alert = UIAlertController(title: "成功", message: "恭喜答對", preferredStyle: .alert)
-            let action = UIAlertAction(title: "確定", style: .default){ (_) in
-                self.setBtnEnable(enable: false)
-            }
-            let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
-                self.reload()
-            }
-            
-            alert.addAction(action)
-            alert.addAction(action2)
-            present(alert, animated: true)
+            CustomAlert.shared.showAlert(with: "Good Job", message: "", on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
         }
         
         if viewModel.indexPath.row == viewModel.gameNumberOfTime - 1 {
-            let alert = UIAlertController(title: "失敗", message: "超過次數", preferredStyle: .alert)
-            let action = UIAlertAction(title: "確定", style: .default){ (_) in
-                self.setBtnEnable(enable: false)
-            }
-            let action2 = UIAlertAction(title: "重來", style: .default){ (_) in
-                self.reload()
+            var answer = ""
+            for num in viewModel.answerArray {
+                answer = answer + String(num)
             }
             
-            alert.addAction(action)
-            alert.addAction(action2)
-            present(alert, animated: true)
-        
+            CustomAlert.shared.showAlert(with: "失敗", message: "ans: "+answer, on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
         }
         
         
@@ -212,9 +199,14 @@ class GameViewController: UIViewController {
     }
     
     
-    
+    func confirmAction() {
+        self.reload()
+        setBtnEnable(enable: true)
+    }
 
-    
+    func crossAction() {
+        self.setBtnEnable(enable: false)
+    }
     
     @IBAction func onPressNumBtn(_ sender: UIButton) {
         if viewModel.currentFocusIndex < GameCurrentState.GameAnswerNumberOfDigits {
@@ -259,6 +251,7 @@ class GameViewController: UIViewController {
         
         
     }
+    
 
 }
 
