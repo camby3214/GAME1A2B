@@ -44,6 +44,7 @@ class GameViewController: UIViewController {
     private func reload() {
         viewModel = GameViewModel()
         creatAnswerArray()
+        viewModel.isReload = 1
         mainTableView.reloadData()
         self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
     }
@@ -258,14 +259,21 @@ extension GameViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
         cell.selectionStyle = .none
         cell.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
-        cell.enterLabel1.text = ""
-        cell.enterLabel2.text = ""
-        cell.enterLabel3.text = ""
-        cell.enterLabel4.text = ""
-        cell.hintLabel1.text = ""
-        cell.hintLabel2.text = ""
-        cell.hintLabel3.text = ""
-        cell.hintLabel4.text = ""
+        if viewModel.isReload == 1 {
+            cell.enterLabel1.text = ""
+            cell.enterLabel2.text = ""
+            cell.enterLabel3.text = ""
+            cell.enterLabel4.text = ""
+            cell.hintLabel1.text = ""
+            cell.hintLabel2.text = ""
+            cell.hintLabel3.text = ""
+            cell.hintLabel4.text = ""
+            
+            if indexPath.row == viewModel.gameNumberOfTime - 1 {
+                viewModel.isReload = 0
+            }
+        }
+        
         return cell
     }
     
