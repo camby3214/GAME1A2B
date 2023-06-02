@@ -36,9 +36,21 @@ class GameViewController: UIViewController {
         setMainTableView()
         setBtnTag()
         setBtn()
+        setNav()
         self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
         
+    }
+    
+    private func setNav() {
+        
+        let rightButtonItem = UIBarButtonItem(image: UIImage(systemName: "goforward"), style: .done, target: self, action: #selector(addButtonTapped))
+        rightButtonItem.tintColor = .black
+        navigationItem.rightBarButtonItem = rightButtonItem
+    }
+    
+    @objc func addButtonTapped() {
+        reload()
     }
     
     private func reload() {
