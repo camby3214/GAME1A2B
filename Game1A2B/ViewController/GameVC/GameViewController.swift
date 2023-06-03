@@ -29,6 +29,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
     @IBOutlet weak var okBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var countLabel: UILabel!
     
     var viewModel = GameViewModel()
     
@@ -39,9 +40,11 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         setBtnTag()
         setBtn()
         setNav()
-        self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
+        self.title = "1A2B"
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
         CustomAlert.shared.delegate = self
+        countLabel.text = "剩餘次數: "+String(viewModel.gameNumberOfTime)
+        countLabel.font = UIFont.boldSystemFont(ofSize: 24)
         
     }
     
@@ -63,6 +66,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         viewModel.isReload = 1
         mainTableView.reloadData()
         self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
+        countLabel.text = "剩餘次數:"+String(viewModel.gameNumberOfTime)
     }
     
     private func creatAnswerArray() {
@@ -226,6 +230,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
                 break
             }
             
+            self.countLabel.text = "剩餘次數: "+String(viewModel.gameNumberOfTime - viewModel.indexPath.row - 1)
             
             if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
                 UILabel.setNumLabel(label: cell.hintLabel1, string: String(compareArray().aValue))

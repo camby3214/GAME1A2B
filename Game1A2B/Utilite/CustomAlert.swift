@@ -74,7 +74,7 @@ class CustomAlert {
         }
         //標題文字為傳入的引數”title”之內容
         titleLabel.text = title
-        titleLabel.font = titleLabel.font.withSize(18)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
         
         //標題文字置中對齊
         titleLabel.textAlignment = .center
@@ -85,6 +85,7 @@ class CustomAlert {
         messageLabel.numberOfLines = 0
         messageLabel.text = message
         messageLabel.center.y = titleLabel.center.y + 30
+        messageLabel.font = UIFont.boldSystemFont(ofSize: 20)
         //設定 messageLabel的文字顏色
         messageLabel.textColor = UIColor(red: 102/255, green: 102/255, blue: 108/255, alpha: 1)
         messageLabel.font = messageLabel.font.withSize(16)

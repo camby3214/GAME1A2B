@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OaI-k0-128">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OaI-k0-128">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -239,13 +239,13 @@
                                 <sections/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="z0r-Zk-nbh">
-                                <rect key="frame" x="10" y="489" width="373" height="313"/>
+                                <rect key="frame" x="10" y="519" width="373" height="283"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sfq-yf-z4T">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="73.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="66"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYx-eQ-8tv">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="73.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="66"/>
                                                 <color key="tintColor" systemColor="systemTealColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -263,7 +263,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-0Z-cwZ">
-                                                <rect key="frame" x="126" y="0.0" width="121" height="73.666666666666671"/>
+                                                <rect key="frame" x="126" y="0.0" width="121" height="66"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -291,7 +291,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV5-Hk-Xq0">
-                                                <rect key="frame" x="252" y="0.0" width="121" height="73.666666666666671"/>
+                                                <rect key="frame" x="252" y="0.0" width="121" height="66"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -310,10 +310,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZgO-j7-bX3">
-                                        <rect key="frame" x="0.0" y="78.666666666666629" width="373" height="74.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="71" width="373" height="67"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnh-Zx-1E6">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="74.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="67"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -341,7 +341,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKe-XZ-ero">
-                                                <rect key="frame" x="126" y="0.0" width="121" height="74.666666666666671"/>
+                                                <rect key="frame" x="126" y="0.0" width="121" height="67"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -358,7 +358,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M3-25-4OF">
-                                                <rect key="frame" x="252" y="0.0" width="121" height="74.666666666666671"/>
+                                                <rect key="frame" x="252" y="0.0" width="121" height="67"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -377,10 +377,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qdH-6M-bp7">
-                                        <rect key="frame" x="0.0" y="158.33333333333337" width="373" height="73.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="143" width="373" height="66"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTe-dG-DFi">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="73.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="66"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -408,7 +408,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMA-TB-FQ8">
-                                                <rect key="frame" x="126" y="0.0" width="121" height="73.666666666666671"/>
+                                                <rect key="frame" x="126" y="0.0" width="121" height="66"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -425,7 +425,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1h-4V-pgI">
-                                                <rect key="frame" x="252" y="0.0" width="121" height="73.666666666666671"/>
+                                                <rect key="frame" x="252" y="0.0" width="121" height="66"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
@@ -456,10 +456,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oMh-H3-adF">
-                                        <rect key="frame" x="0.0" y="237" width="373" height="76"/>
+                                        <rect key="frame" x="0.0" y="214" width="373" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVy-B8-LWT">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="69"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -477,7 +477,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olE-Zk-c7V">
-                                                <rect key="frame" x="126" y="0.0" width="121" height="76"/>
+                                                <rect key="frame" x="126" y="0.0" width="121" height="69"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -494,13 +494,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmN-F2-Ylq">
-                                                <rect key="frame" x="252" y="0.0" width="121" height="76"/>
+                                                <rect key="frame" x="252" y="0.0" width="121" height="69"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="OK">
                                                             <attributes>
-                                                                <font key="NSFont" size="40" name=".SFNS-Bold"/>
+                                                                <font key="NSFont" metaFont="system" size="40"/>
                                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
@@ -515,6 +515,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrF-li-blN">
+                                <rect key="frame" x="9.9999999999999964" y="479" width="56.666666666666657" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S3f-kM-mbm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sv2-fU-SAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -522,11 +531,13 @@
                             <constraint firstItem="Sv2-fU-SAZ" firstAttribute="trailing" secondItem="WJi-bT-cE5" secondAttribute="trailing" id="4ci-n4-Ueo"/>
                             <constraint firstItem="Sv2-fU-SAZ" firstAttribute="trailing" secondItem="z0r-Zk-nbh" secondAttribute="trailing" constant="10" id="GM2-ks-dvV"/>
                             <constraint firstItem="z0r-Zk-nbh" firstAttribute="centerX" secondItem="gyd-26-dLt" secondAttribute="centerX" id="beF-aw-E5h"/>
-                            <constraint firstItem="z0r-Zk-nbh" firstAttribute="top" secondItem="WJi-bT-cE5" secondAttribute="bottom" constant="20" id="cnP-11-y7v"/>
+                            <constraint firstItem="z0r-Zk-nbh" firstAttribute="top" secondItem="GrF-li-blN" secondAttribute="bottom" constant="10" id="cnP-11-y7v"/>
                             <constraint firstItem="WJi-bT-cE5" firstAttribute="top" secondItem="Sv2-fU-SAZ" secondAttribute="top" constant="10" id="dAw-H9-nlb"/>
+                            <constraint firstItem="GrF-li-blN" firstAttribute="leading" secondItem="Sv2-fU-SAZ" secondAttribute="leading" constant="10" id="eet-xg-sTv"/>
                             <constraint firstAttribute="bottom" secondItem="z0r-Zk-nbh" secondAttribute="bottom" constant="50" id="kbh-33-1rk"/>
                             <constraint firstItem="WJi-bT-cE5" firstAttribute="leading" secondItem="Sv2-fU-SAZ" secondAttribute="leading" id="mIK-HA-P9h"/>
                             <constraint firstItem="z0r-Zk-nbh" firstAttribute="leading" secondItem="Sv2-fU-SAZ" secondAttribute="leading" constant="10" id="njL-b8-Af7"/>
+                            <constraint firstItem="GrF-li-blN" firstAttribute="top" secondItem="WJi-bT-cE5" secondAttribute="bottom" constant="10" id="rCi-Id-65t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jhT-3k-Mzp"/>
@@ -542,6 +553,7 @@
                         <outlet property="btn8" destination="YMA-TB-FQ8" id="M45-ZQ-834"/>
                         <outlet property="btn9" destination="B1h-4V-pgI" id="vPd-51-9qc"/>
                         <outlet property="cancelBtn" destination="qVy-B8-LWT" id="JeH-WU-JZ6"/>
+                        <outlet property="countLabel" destination="GrF-li-blN" id="cYe-pa-0PA"/>
                         <outlet property="mainTableView" destination="WJi-bT-cE5" id="3m9-6Y-p93"/>
                         <outlet property="okBtn" destination="HmN-F2-Ylq" id="8rH-Em-Y55"/>
                     </connections>
