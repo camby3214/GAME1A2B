@@ -26,6 +26,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
     
     
     
+    @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var okBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var mainTableView: UITableView!
@@ -45,7 +46,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         CustomAlert.shared.delegate = self
         countLabel.text = "剩餘次數: "+String(viewModel.gameNumberOfTime)
         countLabel.font = UIFont.boldSystemFont(ofSize: 24)
-        
+        answerLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
     
     private func setNav() {
@@ -65,8 +66,8 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         creatAnswerArray()
         viewModel.isReload = 1
         mainTableView.reloadData()
-        self.title = String(viewModel.answerArray[0]) + String(viewModel.answerArray[1]) + String(viewModel.answerArray[2]) + String(viewModel.answerArray[3])
         countLabel.text = "剩餘次數:"+String(viewModel.gameNumberOfTime)
+        answerLabel.isHidden = true
     }
     
     private func creatAnswerArray() {
@@ -110,9 +111,12 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.backgroundColor = .white
-        mainTableView.separatorStyle = .singleLine
-        mainTableView.separatorColor = .black
+        mainTableView.separatorStyle = .none
+       // mainTableView.separatorColor = .black
         mainTableView.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        mainTableView.layer.borderWidth = 3
+        mainTableView.layer.borderColor = CGColor(red: 173/255, green: 173/255, blue: 173/255, alpha: 1)
+        mainTableView.layer.cornerRadius = 10
         
     }
     
@@ -210,12 +214,21 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
 
     func crossAction() {
         self.setBtnEnable(enable: false)
+        answerLabel.isHidden = false
+        var answer = ""
+        for num in viewModel.answerArray {
+            answer = answer+String(num)
+        }
+        
+        answerLabel.text = "答案: "+answer
     }
     
     @IBAction func onPressNumBtn(_ sender: UIButton) {
         if viewModel.currentFocusIndex < GameCurrentState.GameAnswerNumberOfDigits {
             btnAction(btnNum: sender.tag)
+            sender.isEnabled = false
         }
+        
     }
     
     
@@ -241,11 +254,17 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
             viewModel.indexPath.row = viewModel.indexPath.row + 1
             viewModel.currentFocusIndex = 0
             viewModel.enterNumberArray = []
+            
+            setBtnEnable(enable: true)
             break
         case cancelBtn:
             if viewModel.currentFocusIndex > 0 {
                 viewModel.currentFocusIndex -= 1
                 setLabelText(btnNumber: "", labelNumber: viewModel.currentFocusIndex)
+                
+                if let button = self.view.viewWithTag(viewModel.enterNumberArray.last ?? 100) as? UIButton {
+                    button.isEnabled = true
+                }
                 viewModel.enterNumberArray.removeLast()
             }
             break
