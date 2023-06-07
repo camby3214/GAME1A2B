@@ -7,7 +7,7 @@
 */
 
 "Toast_EnterFail" = "Please enter four numbers";
-"lable_RemainingCount" = "Remaining";
+"label_RemainingCount" = "Remaining";
 "alert_fail_title" = "Fail";
 "alert_fail_body" = "Ans: ";
 "alert_btn" = "Restart";

@@ -6,7 +6,7 @@
   
 */
 "Toast_EnterFail" = "請輸入四個數字";
-"lable_RemainingCount" = "剩餘次數";
+"label_RemainingCount" = "剩餘次數";
 "alert_fail_title" = "失敗";
 "alert_fail_body" = "答案: ";
 "alert_btn" = "重新開始";

@@ -45,7 +45,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         self.title = "1A2B"
         self.view.backgroundColor = .MyColor.game1Bg
         CustomAlert.shared.delegate = self
-        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfPlays)
+        countLabel.text = "label_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfPlays)
         countLabel.font = UIFont.boldSystemFont(ofSize: 24)
         answerLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
@@ -279,7 +279,6 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         
         
     }
-    
 
 }
 
