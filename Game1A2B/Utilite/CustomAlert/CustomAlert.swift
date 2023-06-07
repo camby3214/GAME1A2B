@@ -108,7 +108,7 @@ class CustomAlert {
                                                y: 0,
                                                width: 170,
                                                height: 37))
-        add_event.setTitle("重新開始", for: .normal)
+        add_event.setTitle("alert_btn".localizedString(), for: .normal)
         add_event.center = CGPoint(x: alertView.frame.size.width * 0.5,
                                    y: alertView.frame.size.height/1.3)
         add_event.layer.cornerRadius = 7

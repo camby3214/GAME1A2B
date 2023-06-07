@@ -5,3 +5,10 @@
   Created by 李韋辰 on 2023/6/7.
   
 */
+
+"Toast_EnterFail" = "Please enter four numbers";
+"lable_RemainingCount" = "Remaining";
+"alert_fail_title" = "Fail";
+"alert_fail_body" = "Ans: ";
+"alert_btn" = "Restart";
+"label_answer" = "Ans: ";

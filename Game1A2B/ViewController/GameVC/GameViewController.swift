@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class GameViewController: UIViewController, CoustomAlertDelegate {
     
@@ -44,7 +45,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         self.title = "1A2B"
         self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
         CustomAlert.shared.delegate = self
-        countLabel.text = "剩餘次數: "+String(viewModel.gameNumberOfTime)
+        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime)
         countLabel.font = UIFont.boldSystemFont(ofSize: 24)
         answerLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
@@ -66,7 +67,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         creatAnswerArray()
         viewModel.isReload = 1
         mainTableView.reloadData()
-        countLabel.text = "剩餘次數:"+String(viewModel.gameNumberOfTime)
+        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime)
         answerLabel.isHidden = true
     }
     
@@ -190,7 +191,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
             
         }
         if aValue == 4 {
-            CustomAlert.shared.showAlert(with: "Good Job", message: "", on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
+            CustomAlert.shared.showAlert(with: "Good Job!", message: "", on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
         }
         
         if viewModel.indexPath.row == viewModel.gameNumberOfTime - 1 {
@@ -199,7 +200,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
                 answer = answer + String(num)
             }
             
-            CustomAlert.shared.showAlert(with: "失敗", message: "ans: "+answer, on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
+            CustomAlert.shared.showAlert(with: "alert_fail_title".localizedString(), message: "alert_fail_body".localizedString()+answer, on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
         }
         
         
@@ -220,7 +221,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
             answer = answer+String(num)
         }
         
-        answerLabel.text = "答案: "+answer
+        answerLabel.text = "label_answer".localizedString()+answer
     }
     
     @IBAction func onPressNumBtn(_ sender: UIButton) {
@@ -240,10 +241,12 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         
         case okBtn:
             if viewModel.currentFocusIndex != GameCurrentState.GameAnswerNumberOfDigits {
+                
+                self.view.makeToast("Toast_EnterFail".localizedString())
                 break
             }
             
-            self.countLabel.text = "剩餘次數: "+String(viewModel.gameNumberOfTime - viewModel.indexPath.row - 1)
+            self.countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime - viewModel.indexPath.row - 1)
             
             if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
                 UILabel.setNumLabel(label: cell.hintLabel1, string: String(compareArray().aValue))
