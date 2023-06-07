@@ -12,6 +12,6 @@ class GameViewModel {
     var enterNumberArray: [Int] = []
     var indexPath = IndexPath(row: 0, section: 0)
     var answerArray: [Int] = []
-    var gameNumberOfTime = 8
+    var gameNumberOfPlays = 8
     var isReload = 0
 }

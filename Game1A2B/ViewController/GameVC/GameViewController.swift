@@ -45,7 +45,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         self.title = "1A2B"
         self.view.backgroundColor = .MyColor.game1Bg
         CustomAlert.shared.delegate = self
-        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime)
+        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfPlays)
         countLabel.font = UIFont.boldSystemFont(ofSize: 24)
         answerLabel.font = UIFont.boldSystemFont(ofSize: 24)
     }
@@ -67,7 +67,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         creatAnswerArray()
         viewModel.isReload = 1
         mainTableView.reloadData()
-        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime)
+        countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfPlays)
         answerLabel.isHidden = true
     }
     
@@ -195,7 +195,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
             CustomAlert.shared.showAlert(with: "Good Job!", message: "", on: self, backgroundImg: "alert_bg", crossImg: "cross", logoImg: "")
         }
         
-        if viewModel.indexPath.row == viewModel.gameNumberOfTime - 1 {
+        if viewModel.indexPath.row == viewModel.gameNumberOfPlays - 1 {
             var answer = ""
             for num in viewModel.answerArray {
                 answer = answer + String(num)
@@ -247,7 +247,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
                 break
             }
             
-            self.countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime - viewModel.indexPath.row - 1)
+            self.countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfPlays - viewModel.indexPath.row - 1)
             
             if let cell = mainTableView.cellForRow(at: viewModel.indexPath) as? MainTableViewCell {
                 UILabel.setNumLabel(label: cell.hintLabel1, string: String(compareArray().aValue))
@@ -286,7 +286,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
 
 extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.gameNumberOfTime
+        return viewModel.gameNumberOfPlays
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -303,7 +303,7 @@ extension GameViewController: UITableViewDelegate, UITableViewDataSource {
             cell.hintLabel3.text = ""
             cell.hintLabel4.text = ""
             
-            if indexPath.row == viewModel.gameNumberOfTime - 1 {
+            if indexPath.row == viewModel.gameNumberOfPlays - 1 {
                 viewModel.isReload = 0
             }
         }
