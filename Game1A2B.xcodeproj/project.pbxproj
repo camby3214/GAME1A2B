@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		38062D362A298E9800BCA054 /* EnumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D352A298E9800BCA054 /* EnumList.swift */; };
-		38062D392A29CAD100BCA054 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D382A29CAD100BCA054 /* UIButton+Extention.swift */; };
-		38062D3B2A29D8E600BCA054 /* UILabel+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D3A2A29D8E600BCA054 /* UILabel+Extention.swift */; };
+		38062D392A29CAD100BCA054 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D382A29CAD100BCA054 /* UIButton+Extension.swift */; };
+		38062D3B2A29D8E600BCA054 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38062D3A2A29D8E600BCA054 /* UILabel+Extension.swift */; };
 		382A8E242A3051FF00EC7437 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A8E232A3051FF00EC7437 /* CustomAlert.swift */; };
 		382A8E292A30548F00EC7437 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 382A8E2B2A30548F00EC7437 /* Localizable.strings */; };
-		382A8E2E2A30564B00EC7437 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A8E2D2A30564B00EC7437 /* String+Extention.swift */; };
+		382A8E2E2A30564B00EC7437 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A8E2D2A30564B00EC7437 /* String+Extension.swift */; };
+		382A8E302A305FD400EC7437 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A8E2F2A305FD400EC7437 /* UIColor+Extension.swift */; };
 		38A0F5F32A28232D000F1D82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F5F22A28232D000F1D82 /* AppDelegate.swift */; };
 		38A0F5F52A28232D000F1D82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F5F42A28232D000F1D82 /* SceneDelegate.swift */; };
 		38A0F5F72A28232D000F1D82 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0F5F62A28232D000F1D82 /* MainViewController.swift */; };
@@ -49,14 +50,15 @@
 		093AAC8B21DEC8C6A8FCAD63 /* Pods-Game1A2B.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game1A2B.debug.xcconfig"; path = "Target Support Files/Pods-Game1A2B/Pods-Game1A2B.debug.xcconfig"; sourceTree = "<group>"; };
 		324D8905A2DAE1400BAF119C /* Pods_Game1A2BTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game1A2BTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38062D352A298E9800BCA054 /* EnumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumList.swift; sourceTree = "<group>"; };
-		38062D382A29CAD100BCA054 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
-		38062D3A2A29D8E600BCA054 /* UILabel+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extention.swift"; sourceTree = "<group>"; };
+		38062D382A29CAD100BCA054 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		38062D3A2A29D8E600BCA054 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		382A8E232A3051FF00EC7437 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		382A8E252A30542700EC7437 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		382A8E262A30542700EC7437 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		382A8E2A2A30548F00EC7437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		382A8E2C2A30549400EC7437 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		382A8E2D2A30564B00EC7437 /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
+		382A8E2D2A30564B00EC7437 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		382A8E2F2A305FD400EC7437 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		38A0F5EF2A28232D000F1D82 /* Game1A2B.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game1A2B.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A0F5F22A28232D000F1D82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A0F5F42A28232D000F1D82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,14 +119,15 @@
 			path = Utilite;
 			sourceTree = "<group>";
 		};
-		38062D372A29CAB900BCA054 /* Extention */ = {
+		38062D372A29CAB900BCA054 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				38062D382A29CAD100BCA054 /* UIButton+Extention.swift */,
-				38062D3A2A29D8E600BCA054 /* UILabel+Extention.swift */,
-				382A8E2D2A30564B00EC7437 /* String+Extention.swift */,
+				38062D382A29CAD100BCA054 /* UIButton+Extension.swift */,
+				38062D3A2A29D8E600BCA054 /* UILabel+Extension.swift */,
+				382A8E2D2A30564B00EC7437 /* String+Extension.swift */,
+				382A8E2F2A305FD400EC7437 /* UIColor+Extension.swift */,
 			);
-			path = Extention;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		382A8E222A3051FF00EC7437 /* CustomAlert */ = {
@@ -158,7 +161,7 @@
 		38A0F5F12A28232D000F1D82 /* Game1A2B */ = {
 			isa = PBXGroup;
 			children = (
-				38062D372A29CAB900BCA054 /* Extention */,
+				38062D372A29CAB900BCA054 /* Extension */,
 				38062D342A298E2A00BCA054 /* Utilite */,
 				38A0F6282A2830BA000F1D82 /* Cell */,
 				38A0F6272A2830A5000F1D82 /* ViewController */,
@@ -474,13 +477,14 @@
 			files = (
 				382A8E242A3051FF00EC7437 /* CustomAlert.swift in Sources */,
 				38A0F6232A2825DB000F1D82 /* GameViewController.swift in Sources */,
-				38062D392A29CAD100BCA054 /* UIButton+Extention.swift in Sources */,
+				38062D392A29CAD100BCA054 /* UIButton+Extension.swift in Sources */,
 				38A0F5F72A28232D000F1D82 /* MainViewController.swift in Sources */,
 				38062D362A298E9800BCA054 /* EnumList.swift in Sources */,
 				38A0F5F32A28232D000F1D82 /* AppDelegate.swift in Sources */,
-				38062D3B2A29D8E600BCA054 /* UILabel+Extention.swift in Sources */,
+				38062D3B2A29D8E600BCA054 /* UILabel+Extension.swift in Sources */,
 				38A0F6262A282CB7000F1D82 /* AssetsManager.swift in Sources */,
-				382A8E2E2A30564B00EC7437 /* String+Extention.swift in Sources */,
+				382A8E2E2A30564B00EC7437 /* String+Extension.swift in Sources */,
+				382A8E302A305FD400EC7437 /* UIColor+Extension.swift in Sources */,
 				38A0F62A2A2830D7000F1D82 /* MainTableViewCell.swift in Sources */,
 				38A0F5F52A28232D000F1D82 /* SceneDelegate.swift in Sources */,
 				DB383B932A28EB8000B17396 /* GameViewModel.swift in Sources */,

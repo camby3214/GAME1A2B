@@ -43,7 +43,7 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         setBtn()
         setNav()
         self.title = "1A2B"
-        self.view.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        self.view.backgroundColor = .MyColor.game1Bg
         CustomAlert.shared.delegate = self
         countLabel.text = "lable_RemainingCount".localizedString()+": "+String(viewModel.gameNumberOfTime)
         countLabel.font = UIFont.boldSystemFont(ofSize: 24)
@@ -106,6 +106,8 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         UIButton.setNumberBtn(btn: btn9, title: "9")
         UIButton.setNumberBtn(btn: okBtn, title: "OK")
         UIButton.setNumberBtn(btn: cancelBtn, title: "C")
+        okBtn.backgroundColor = .MyColor.okBtn
+        cancelBtn.backgroundColor = .MyColor.cancelBtn
     }
     
     private func setMainTableView() {
@@ -113,10 +115,9 @@ class GameViewController: UIViewController, CoustomAlertDelegate {
         mainTableView.dataSource = self
         mainTableView.backgroundColor = .white
         mainTableView.separatorStyle = .none
-       // mainTableView.separatorColor = .black
-        mainTableView.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        mainTableView.backgroundColor = .MyColor.game1Bg
         mainTableView.layer.borderWidth = 3
-        mainTableView.layer.borderColor = CGColor(red: 173/255, green: 173/255, blue: 173/255, alpha: 1)
+        mainTableView.layer.borderColor = UIColor.MyColor.lineBoard.cgColor
         mainTableView.layer.cornerRadius = 10
         
     }
@@ -291,7 +292,7 @@ extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
         cell.selectionStyle = .none
-        cell.backgroundColor = UIColor(cgColor: CGColor(red: 241/255, green: 224/255, blue: 255/255, alpha: 1))
+        cell.backgroundColor = .MyColor.game1Bg
         if viewModel.isReload == 1 {
             cell.enterLabel1.text = ""
             cell.enterLabel2.text = ""
